@@ -1,0 +1,25 @@
+.left { float: left; }
+.right { float: right; }
+.hideme { opacity:0; }
+
+div.social-wrapper { align-items: center; }
+
+@media screen and (min-width: 700px){
+	article, .footer-wrapper{
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	article, .footer-wrapper {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+	img.social {
+		padding-right: 30px;
+		width: 100px;
+	}
+
+}

@@ -1,0 +1,106 @@
+/*========================Variables========================*/
+
+$nav-padding: $base-line-height;
+$nav-height: 50px; 
+
+/*================================================*/
+
+html {
+	font-smoothing: antialiased !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: antialiased !important;
+	overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
+	-moz-osx-overflow-scrolling: touch;
+	font-size: 14px;
+	font-family: Roboto Slab;
+}
+
+h1 { 
+	@include type-setting(2);
+	font-family: Futura;
+	margin-bottom: $base-line-height;
+};
+h2 { 
+	@include type-setting(1);
+	font-family: Futura;
+	margin-bottom: $base-line-height;
+};
+p{ 
+	@include type-setting(0);
+	margin-bottom: $base-line-height;
+
+};
+
+li {
+	@include type-setting(0);
+}
+
+div#wrapper {
+	position: absolute;
+	height: 100%;
+    width: 100%;
+    margin: 0px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+a.strain-attribute {
+	text-decoration: none;
+	color: font-color('dark');
+}
+
+a.contact-email {
+	color: font-color('light')
+}
+
+a.contact-email:hover, a.strain-attribute:hover {
+	color: font-color('accent');
+}
+
+header#video-header{
+	min-height: 100%;
+	background-image: url('../img/header-bg.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+	width: 100%;
+	padding-top: $base-line-height * 5;
+	padding-bottom: $base-line-height * 5;
+	align-self: center;
+}
+
+footer {
+	background-image: url('../img/footer-bg.jpg');
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: $base-line-height * 2;
+	padding-bottom: $base-line-height * 2;
+	color: font-color('light');
+}
+
+@media screen and (min-width: 700px){
+	html {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 1100px){
+	ul.uses {
+		width: 50%;
+		float: left;
+	}
+}
