@@ -12,16 +12,28 @@
 	<script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
     <script src="//code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+  	<script src="js/modernizr.custom.js"></script>
 </head>
-
 <body>
 	<div id="wrapper">
-
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close">Close</button>
+			<nav id="mobile-nav">
+				<ul>
+					<li><a href="#history">history</a></li>
+					<li><a href="#tincture-use">how to use</a></li>
+					<li><a href="#tincture-strain">strain</a></li>
+					<li><a href="#footer-wrapper">contact</a></li>
+				</ul>
+			</nav>
+		</div>
 		<div id="head"></div>
-		<nav>
+		<nav id="full-nav">
 			<a href="#head"><img id="logo" class="left" src="img/cannacentials-logo.svg"></a>
-			<div class="mobile-nav"><a class="menu-button" href="#">Menu</a></div>
-			<div class="full-nav nav-wrapper">
+			<div class="mobile-nav">
+				<a id="trigger-overlay" class="menu-button" type="button" href="#">Menu</a>
+			</div>
+			<div class="full-nav nav-wrapper" ng-hide>
 				<ul>
 					<!-- reverse order -->
 					<li><a href="#footer-wrapper">contact</a></li>
@@ -31,6 +43,7 @@
 				</ul>
 			</div>
 		</nav>
+		
 		<header id="video-header">
 			<iframe id="startchange" src="https://player.vimeo.com/video/16350536" width="860" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</header>
@@ -43,7 +56,6 @@
 				<div class="history-image">
 					<img src="img/strain-img.jpg">
 				</div>
-				
 				<p class="hideme img-desc">Cannabis tinctures, also known as green or golden dragon, are alcohol-based cannabis extracts - essentially, infused alcohol. In fact, tinctures were the main form of cannabis medicine until the United States enacted cannabis prohibition. </p>
 				<p class="hideme">Tinctures are not new. Until cannabis was banned in 1937, tinctures were the primary type of cannabis medicines. Tinctures are essentially alcohol extractions of whole cannabis (usually the flowers and trim leaves).</p>
 				<p class="hideme">With a name like “green dragon,” you might think cannabis tinctures are not for the faint of heart, but they’re actually a great entry point for both recreational and medical users looking to ease into smokeless consumption methods.</p>
@@ -81,7 +93,7 @@
 				<h1>Tincture Strain</h1>
 			</header>
 			<article>
-				<h2>Grand Master OG Kush</h2>
+				<h2>Indica</h2>
 				<div class="strain-image">
 					<img src="img/strain-img.jpg">
 					<div class="element-box">
@@ -115,9 +127,9 @@
 				<div class="social-wrapper">
 					<div><p>© 2016 Canna Centials</p></div>
 					<div class="social-wrapper">
-						<a href="https://www.instagram.com/cannacentials/"><img class="social" src="img/social-facebook.svg"></a>
-						<a href="https://www.instagram.com/cannacentials/"><img class="social" src="img/social-insta.svg"></a>
-						<a href="https://twitter.com/Cannacentials"><img class="social" src="img/social-twitter.svg"></a>
+						<a href="https://www.instagram.com/cannacentials/"><img class="social" src="img/social/social-facebook.svg"></a>
+						<a href="https://www.instagram.com/cannacentials/"><img class="social" src="img/social/social-insta.svg"></a>
+						<a href="https://twitter.com/Cannacentials"><img class="social" src="img/social/social-twitter.svg"></a>
 					</div>
 				</div>
 			</div>
@@ -125,7 +137,8 @@
 	</div>
 	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/controllers.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-
+	<script type="text/javascript" src="js/main-min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/demo1.js"></script>
 </body>
 </html>

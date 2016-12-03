@@ -50,9 +50,10 @@ $(document).ready(function() {
   $(document).scroll(function() { 
     scroll_start = $(this).scrollTop();
     if(scroll_start > offset.top) {
-        $("nav").css('background-color', '#131E00');
+        //$("nav").css('background-color', '#131E00'); // dark
+        $("nav#full-nav").css('background-color', '#82B240');
      } else {
-        $('nav').css('background-color', 'transparent');
+        $('nav#full-nav').css('background-color', 'transparent');
      }
   });
   }

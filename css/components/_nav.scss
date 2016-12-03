@@ -3,9 +3,10 @@
 	padding-left: 10%;
 }
 
-.full-nav { opacity: 0; }
+.full-nav { display: none; }
 
 .mobile-nav { 
+	z-index: 1000;
 	opacity: 1; 
 	float: right;
 	padding-top: 18px;
@@ -18,7 +19,11 @@
 	}
 }
 
-nav {
+nav#mobile-nav > a{
+	font-weight: 2.5rem;
+}
+
+nav#full-nav {
 	z-index: 100;
 	width: 100%;
 	top: 0;
@@ -49,7 +54,7 @@ nav {
 		}
 	}
 
-	nav { height: 3rem; }
+	nav#full-nav { height: 3rem; }
 
 	.mobile-nav { 
 		opacity: 1; 
@@ -74,6 +79,6 @@ nav {
 	}
 
 	.full-nav {
-		opacity: 1;
+		display: block;
 	}
 }

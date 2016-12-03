@@ -121,6 +121,7 @@ div#wrapper {
 
 a.strain-attribute {
   text-decoration: none;
+  font-weight: bold;
   color: #000000; }
 
 a.contact-email {
@@ -224,20 +225,122 @@ progress {
 .progress-bar-info {
   background-color: #82B240; }
 
-.effects-1, .effects-2, .effects-3, .effects-4, .effects-5, .medical-1, .medical-2, .medical-3, .medical-4, .medical-5, .negatives-1, .negatives-2, .negatives-3, .negatives-4, .negatives-5 {
-  -webkit-transition: width 3.50s ease !important;
-  -moz-transition: width 3.50s ease !important;
-  -o-transition: width 3.50s ease !important;
-  transition: width 3.50s ease !important; }
+.effectsa, .effectsb, .effectsc, .effectsd, .effectse, .medicala, .medicalb, .medicalc, .medicald, .medicale, .negativesa, .negativesb, .negativesc, .negativesd, .negativese {
+  -webkit-transition: width 2.50s ease !important;
+  -moz-transition: width 2.50s ease !important;
+  -o-transition: width 2.50s ease !important;
+  transition: width 2.50s ease !important; }
 
+/* Overlay style */
+.overlay {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(153, 204, 51, 0.9); }
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  background: url(../img/cross.png) no-repeat center center;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 100; }
+
+/* Menu style */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative; }
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px; }
+
+.overlay ul li a {
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-size: 32px;
+  margin-top: 20px;
+  text-decoration: none; }
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: #e3fcb1; }
+
+/* Effects */
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s; }
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px; }
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s; }
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
+
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg); }
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px; }
+
+  .overlay ul li {
+    min-height: 34px; } }
 #logo {
   max-width: 200px;
   padding-left: 10%; }
 
 .full-nav {
-  opacity: 0; }
+  display: none; }
 
 .mobile-nav {
+  z-index: 1000;
   opacity: 1;
   float: right;
   padding-top: 18px;
@@ -247,7 +350,10 @@ progress {
     color: #FFFFFF;
     font-family: Futura; }
 
-nav {
+nav#mobile-nav > a {
+  font-weight: 2.5rem; }
+
+nav#full-nav {
   z-index: 100;
   width: 100%;
   top: 0;
@@ -272,7 +378,7 @@ nav {
       color: #FFFFFF;
       font-family: Futura; }
 
-  nav {
+  nav#full-nav {
     height: 3rem; }
 
   .mobile-nav {
@@ -288,7 +394,7 @@ nav {
     opacity: 0; }
 
   .full-nav {
-    opacity: 1; } }
+    display: block; } }
 iframe {
   max-width: 100%;
   align-items: center; }
@@ -306,13 +412,17 @@ section#tincture-use article {
 
 .element-box {
   position: relative;
-  top: -103px;
+  top: -95px;
+  left: -5px;
   height: 100px;
   width: 100px;
   background-color: #400078;
   color: #FFFFFF;
   font-size: 10px;
-  border-color-top: white; }
+  font-weight: bold;
+  border-color-top: white;
+  border-top: 5px white solid;
+  border-right: 5px white solid; }
 
 .element-type {
   position: absolute;
