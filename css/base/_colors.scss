@@ -14,10 +14,20 @@ $font-colors: (
 	'accent': #82B240
 );
 
+$bar-colors: (
+	'effects-color': #82B240,
+	'medical-color': #82B240,
+	'negatives-color': #82B240
+);
+
 @function color($key: 'primary') {
   @return map-get($colors, $key);
 }
 
 @function font-color($key: 'dark') {
   @return map-get($font-colors, $key);
+}
+
+@function bar-color($key: 'effects-color') {
+  @return map-get($bar-colors, $key);
 }

@@ -2,6 +2,11 @@
 .right { float: right; }
 .hideme { opacity:0; }
 
+article, .footer-wrapper{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
 div.social-wrapper { align-items: center; }
 
 @media screen and (min-width: 700px){
