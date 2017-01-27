@@ -56,7 +56,7 @@ a.contact-email {
 	color: font-color('light')
 }
 
-a.contact-email:hover, a.strain-attribute:hover {
+a.contact-email:hover, a.strain-attribute:hover, a.strain-attribute:active {
 	color: font-color('accent');
 }
 

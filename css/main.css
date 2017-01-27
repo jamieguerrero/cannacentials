@@ -127,7 +127,7 @@ a.strain-attribute {
 a.contact-email {
   color: #FFFFFF; }
 
-a.contact-email:hover, a.strain-attribute:hover {
+a.contact-email:hover, a.strain-attribute:hover, a.strain-attribute:active {
   color: #82B240; }
 
 header#video-header {
