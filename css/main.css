@@ -445,8 +445,8 @@ img {
   max-width: 100%; }
 
 .strain-image, .history-image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 0px auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -457,7 +457,7 @@ img {
 
 img.social {
   padding-right: 15px;
-  width: 70px;
+  width: 60px;
   float: center; }
 
 img.liquid-logo {

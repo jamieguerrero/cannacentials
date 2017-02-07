@@ -1,0 +1,59 @@
+@import url("reset.css");
+
+@font-face {
+	font-family: 'Aqua Grotesque';
+	src: url('fonts/AquaGrotesque.eot');
+	src: url('fonts/AquaGrotesque.eot?#iefix') format('embedded-opentype'),
+		url('fonts/AquaGrotesque.woff') format('woff'),
+		url('fonts/AquaGrotesque.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.white {
+	color: #FFFFFF;
+	font-family: Aqua Grotesque;
+	font-size: 36px;
+	transition: color 3s;
+	-webkit-transition: all 2s ease-out;
+	-moz-transition: all 2s ease-out;
+	-o-transition: all 2s ease-out;
+	-ms-transition: all 2s ease-out;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2:hover {
+	color: #0D6008;
+}
+
+html {
+	background-color: black;
+	font-smoothing: antialiased !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: antialiased !important;
+	overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transition: all 0.3s ease;
+}
+
+#outer {
+	position: absolute;
+	height: 100%;
+    width: 100%;
+    margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#headline {
+	margin: 0px;
+}
+
+img {
+	max-width: 80%;
+}
